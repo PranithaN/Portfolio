@@ -1,0 +1,134 @@
+<html>
+
+    <head>
+        
+        <title>Code Player</title>
+ 
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <script src="jquery-ui/jquery-ui.js"></script>
+        
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        <style>
+		* {
+                margin: 0;
+                padding: 0;
+           }
+
+		 #title{
+		 width: 100%;
+		  background-color:	gainsboro;
+	          font-family:sans-serif;	 
+                
+				height:45px;
+		 }
+		 #head{
+		  float:left;
+		  font-size:120%;
+		  font-weight:bold;
+		  padding: 10px;}
+		  
+		 #buttonContainer{
+		 width:250px;
+		 margin:0 auto;
+		  padding: 10px;}
+		 
+		 .toggleButton{
+		 float:left;
+		 text-align:center;
+		 border: 1px solid grey;
+		 padding:5px;
+		 border-right:none;
+		 }
+		 
+		 #html{
+		 border-top-left-radius:4px;
+		 border-bottom-left-radius:4px;
+		 }
+		 #output{
+		  border-right: 1px solid grey;
+		   border-top-right-radius:4px;
+		 border-bottom-right-radius:4px;
+		 }
+		 .active{
+		 background-color: grey;
+		 }
+		 .mouseover{
+		 background-color: grey;
+		 }
+		 
+		 #htmlTab{
+		 resize:none;
+		 border-top:none;
+		 }
+		 .tab{
+		 float:left;		
+		 }
+		 #outputTab{
+		 border:none;
+		 }
+		 .hidden{
+		 display:none;
+		 }
+		
+		</style>
+        
+        
+    </head>
+
+    <body>
+        
+       <div id="title">
+	     <div id="head">Code Player</div>
+		 <div id="buttonContainer">
+		 <div id="html" class="toggleButton active">HTML</div>
+	    <div id="css" class="toggleButton">CSS</div>
+		<div id="js" class="toggleButton">JavaScript</div>
+		 <div id="output" class="toggleButton active">Output</div>
+		 </div>
+	   </div>
+	   <div id="mainContent">
+	     <textarea id="htmlTab" class="tab"><p id="para">Hello</p></textarea>
+		   <textarea id="cssTab" class="tab hidden">p{color:green;}</textarea>
+		     <textarea id="jsTab" class="tab hidden">document.getElementById("para").innerHTML="Hello World....";</textarea>
+	     <iframe id="outputTab" class="tab"></iframe>
+	   
+	   </div>
+        
+        <script type="text/javascript">
+		
+		function output(){
+		$("iframe").contents().find("html").html("<html><head><style>"+$("#cssTab").val()+"</style></head><body>"+$("#htmlTab").val()+"</body></html>");
+		document.getElementById("outputTab").contentWindow.eval($("#jsTab").val());
+		}
+		// Hovering over options
+         $(".toggleButton").hover(function(){
+		  $(this).addClass("mouseover");
+		 },function(){
+		 $(this).removeClass("mouseover");
+		 });
+		 // selecting the options
+		 $(".toggleButton").click(function(){
+		  $(this).toggleClass("active");
+		   $(this).removeClass("mouseover");
+		   var tabId=$(this).attr("id")+"Tab"; 
+		   $("#"+tabId).toggleClass("hidden");
+		   var noTab=4 - $(".hidden").length;
+		   $(".tab").width(($(window).width()/noTab)-5);	
+		   
+		 });
+		 // setting height of frames
+		 $(".tab").height($(window).height()- $("#title").height());
+		 // setting width of frames
+          $(".tab").width(($(window).width()/2)-5);		 
+		 //Getting output from html
+		output();
+		 $("textarea").on("change keyup paste",function(){
+		output();
+		 });
+	
+        </script>
+        
+    </body>
+
+</html>

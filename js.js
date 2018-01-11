@@ -1,0 +1,16 @@
+$("#linkd").click(function(){
+	  window.location="https://www.linkedin.com/in/pranithan/";
+	  });
+	   $("#gith").click(function(){
+	  window.location="https://github.com/PranithaN";});
+	  $("#jumb").css("min-height",$(window).height());
+	  $("#about").css("min-height",$(window).height());
+	  $("#link").click(function(){
+	  window.location="https://www.linkedin.com/in/pranithan/";
+	  });
+	  $("#git").click(function(){
+	  window.location="https://github.com/PranithaN";
+	  });
+	  $("#resume").click(function(){
+	  window.location.href="document/Res.pdf";
+	  });

@@ -1,0 +1,152 @@
+
+     #about,#edu,#exp,#port,#res,#skill{
+	    padding-top:5%;
+	  }
+	 #cont{
+	    margin-bottom:0px;
+	 }
+	 #jumb{ 
+	    background-image: url(images/home.jpg);		
+        background-size: cover;	   
+	    height:45%;
+	    margin-top:20px;
+	 }
+     .textOver {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+     }
+	 #my{
+	    margin-top:15%;
+	    border-radius: 50%;
+	    width: 200px;
+	    height: 270px;
+	  }
+	 .card-img-top{
+	    height:250px;
+	 }
+	.form-inline{
+	    margin-left:35%;
+	 }		  
+    #sub{
+	    margin-left:25px;
+	 }
+	 .textc{
+	    text-align:center; 
+	}
+	}
+	#news{
+	    margin-top:100px;
+	 }		   
+    #footer{
+	    background-color:#CDCDCD;
+	    margin-top:100px;
+	    text-align:center;
+	}
+	#title{
+	    text-align:center;
+        		
+	   
+	 }
+    #intro{
+	    margin-top:15%;
+	    text-align:center;
+	    font-family:cursive;
+    }		   
+	#resume{
+	    background-color: #ea5252 		   
+	}
+	#link{
+	    background-color:#4caf50;
+	}
+	#git{
+	    background-color:#563d7c;}
+	.button {
+        border: none;
+        width:200px;
+        height:200px;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+	    border-radius:50%;
+    }
+    .card-text{
+		text-align:center;}
+	.centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }		  
+	.image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height:80% ;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .hovereffect:hover .image {
+        opacity: 0.5;
+    }
+    .hovereffect:hover .middle {
+        opacity: 1;
+    }
+    #mail{
+        text-align:center;
+        margin-left:40%;
+        margin-top:20px;
+    }
+    .modal-content {
+       position: relative;
+       background-color: #fefefe;
+       margin: auto;
+       padding: 0;
+       border: 1px solid #888;
+       width: 80%;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+       -webkit-animation-name: animatetop;
+       -webkit-animation-duration: 0.4s;
+       animation-name: animatetop;
+       animation-duration: 0.4s
+    }
+    @-webkit-keyframes animatetop {
+       from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+    }
+    @keyframes animatetop {
+       from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+    }
+    .close {
+       color: white;
+       float: right;
+       font-size: 28px;
+       font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+       color: #000;
+       text-decoration: none;
+       cursor: pointer;
+	}
+	.modal-header {
+    background-color: #343a40;
+    color: white;
+    }
+    .modal-body {padding: 2px 16px;}
